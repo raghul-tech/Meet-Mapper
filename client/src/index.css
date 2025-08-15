@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(180 6.6667% 97.0588%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(217.22 91.22% 59.80%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 25% 7.8431%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(240 1.9608% 90%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(211.5789 51.3514% 92.7451%);
+  --accent-foreground: hsl(217.22 91.22% 59.80%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(201.4286 30.4348% 90.9804%);
+  --input: hsl(200 23.0769% 97.4510%);
+  --ring: hsl(217.22 91.22% 59.80%);
+  --chart-1: hsl(217.22 91.22% 59.80%);
+  --chart-2: hsl(142.1 76.2% 36.3%);
+  --chart-3: hsl(47.9 95.8% 53.1%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(180 6.6667% 97.0588%);
+  --sidebar-foreground: hsl(210 25% 7.8431%);
+  --sidebar-primary: hsl(217.22 91.22% 59.80%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(211.5789 51.3514% 92.7451%);
+  --sidebar-accent-foreground: hsl(217.22 91.22% 59.80%);
+  --sidebar-border: hsl(205.0000 25.0000% 90.5882%);
+  --sidebar-ring: hsl(217.22 91.22% 59.80%);
+  --font-sans: 'Google Sans', 'Open Sans', system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Fira Code', Menlo, monospace;
+  --radius: 0.5rem;
+  --google-blue: hsl(217.22 91.22% 59.80%);
+  --google-green: hsl(142.1 76.2% 36.3%);
+  --google-gray: hsl(210 5.56% 39.02%);
+  --google-dark: hsl(214.29 31.82% 13.73%);
+  --google-light: hsl(210 17% 98%);
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(200 6.6667% 91.1765%);
+  --card: hsl(228 9.8039% 10%);
+  --card-foreground: hsl(0 0% 85.0980%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(200 6.6667% 91.1765%);
+  --primary: hsl(217.22 91.22% 59.80%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(195.0000 15.3846% 94.9020%);
+  --secondary-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(0 0% 9.4118%);
+  --muted-foreground: hsl(210 3.3898% 46.2745%);
+  --accent: hsl(205.7143 70% 7.8431%);
+  --accent-foreground: hsl(217.22 91.22% 59.80%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(210 5.2632% 14.9020%);
+  --input: hsl(207.6923 27.6596% 18.4314%);
+  --ring: hsl(217.22 91.22% 59.80%);
+  --chart-1: hsl(217.22 91.22% 59.80%);
+  --chart-2: hsl(142.1 76.2% 36.3%);
+  --chart-3: hsl(47.9 95.8% 53.1%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(228 9.8039% 10%);
+  --sidebar-foreground: hsl(0 0% 85.0980%);
+  --sidebar-primary: hsl(217.22 91.22% 59.80%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(205.7143 70% 7.8431%);
+  --sidebar-accent-foreground: hsl(217.22 91.22% 59.80%);
+  --sidebar-border: hsl(205.7143 15.7895% 26.0784%);
+  --sidebar-ring: hsl(217.22 91.22% 59.80%);
+  --font-sans: 'Google Sans', 'Open Sans', system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Fira Code', Menlo, monospace;
+  --radius: 0.5rem;
+  --google-blue: hsl(217.22 91.22% 59.80%);
+  --google-green: hsl(142.1 76.2% 36.3%);
+  --google-gray: hsl(210 5.56% 39.02%);
+  --google-dark: hsl(214.29 31.82% 13.73%);
+  --google-light: hsl(210 17% 98%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .custom-marker {
+    background: transparent !important;
+    border: none !important;
+  }
+  
+  /* Fix z-index layering issues */
+  .leaflet-container {
+    z-index: 1 !important;
+  }
+  
+  .leaflet-control-container {
+    z-index: 2 !important;
+  }
+  
+  .leaflet-popup {
+    z-index: 3 !important;
+  }
+  
+  /* Ensure dialogs/modals are always on top */
+  [data-radix-dialog-overlay] {
+    z-index: 50 !important;
+  }
+  
+  [data-radix-dialog-content] {
+    z-index: 51 !important;
+  }
+  
+  /* Filter sidebar z-index */
+  .filter-sidebar {
+    z-index: 40 !important;
+  }
+  
+  /* Location search dropdown */
+  .location-search-dropdown {
+    z-index: 30 !important;
+  }
+}
+
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* LinkedIn-style filter sidebar improvements */
+.filter-sidebar .filter-option:hover {
+  background-color: #f3f4f6;
+  transform: translateX(-2px);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.filter-sidebar .filter-option.active {
+  background-color: #dbeafe;
+  border-left: 3px solid #3b82f6;
+}
+
+.filter-transition {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
